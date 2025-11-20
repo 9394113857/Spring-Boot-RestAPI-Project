@@ -1,0 +1,25 @@
+# Step 1: Create the directory structure (if it doesn't already exist)
+New-Item -ItemType Directory -Force -Path "src\main\resources\database"
+
+# Step 2: Create the empty 'app.db' file within the 'database' directory
+New-Item -ItemType File -Path "src\main\resources\database\app.db"
+
+
+Here’s the general structure for your Spring Boot Maven project:
+my-spring-boot-api/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   └── resources/
+│   │       └── application.properties
+├── target/
+├── pom.xml
+├── create-db.ps1  <-- Save the PowerShell script here
+└── README.md
+
+Steps:
+
+Place the script in the root directory of your project (where pom.xml is located). This will make it easy to run the script whenever you need to create or reset your SQLite database file.
+
+Running the script: Open a terminal (PowerShell or another terminal) from the root of your project and execute the following command:
